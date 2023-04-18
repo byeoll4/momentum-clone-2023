@@ -49,6 +49,15 @@ function handleToDoSubmit(event) {
   saveTodos();
 }
 
+function focusForm() {
+  toDoInput.placeholder = "";
+}
+function blurForm() {
+  toDoInput.placeholder = "Today's To Do";
+}
+toDoInput.addEventListener("focus", focusForm);
+toDoInput.addEventListener("blur", blurForm);
+
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const saveToDos = localStorage.getItem(TODOS_KEY);
