@@ -10,16 +10,10 @@ function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
-function sexyFilter(todo) {
-  const li = event.target.parentElement;
-  return todo.id !== parseInt(li.id);
-}
-
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
-  toDos = toDos.filter(sexyFilter);
-  //toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveTodos();
 }
 
@@ -27,12 +21,18 @@ function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
   const span = document.createElement("span");
+  span.classList.add("todo-text");
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
-  button.addEventListener("click", deleteToDo);
-  button.innerText = "❌";
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.classList.add("todo-checkbox");
+  const deleteBox = document.createElement("button");
+  deleteBox.classList.add("todo-deletebox");
+  deleteBox.innerText = "❌";
+  deleteBox.addEventListener("click", deleteToDo);
+  li.appendChild(checkBox);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(deleteBox);
   toDoList.appendChild(li);
 }
 

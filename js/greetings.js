@@ -15,9 +15,26 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(a) {
-  greeting.innerText = `Hello, ${a}`;
+  const date = new Date();
+  const hours = parseInt(date.getHours());
+  greeting.id = hours;
+
+  if (hours <= 6) {
+    greeting.innerText = `Good Night, ${a}`;
+  } else if (hours <= 18) {
+    greeting.innerText = `Good Day, ${a}`;
+  } else if (hours <= 23) {
+    greeting.innerText = `Good Evening, ${a}`;
+  } else {
+  }
+
   greeting.classList.remove(HIDDEN_CLASSNAME);
   todoForm.classList.remove(HIDDEN_CLASSNAME); // 4.18 추가
+}
+
+function getClock() {
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, "0");
 }
 
 const saveUsername = localStorage.getItem(USERNAME_KEY);

@@ -1,0 +1,18 @@
+.quote {
+  position: fixed;
+  bottom: 3%;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.quote span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+}
+.quote button {
+  border: none;
+  background-color: transparent;
+}

@@ -1,65 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+@import "section.css";
+@import "todo.css";
+@import "clock.css";
+@import "greeting.css";
+@import "quote.css";
+
 .hidden {
   display: none;
 }
+
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 10%;
-}
-
-input:focus {
-  outline: none;
-}
-
-.clock {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-.todo-form input,
-.login-form input:first-child {
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid rgba(0, 0, 0);
-  width: 300px;
-  text-align: center;
-  font-size: 23px;
-}
-.todo-form input::placeholder,
-.login-form input::placeholder {
-  text-align: center;
-  font-size: 25px;
-}
-
-.login-form input:last-child {
-  display: none;
-}
-
-.quote {
-  position: fixed;
-  bottom: 0px;
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px 3px;
-  box-sizing: border-box;
-  font-size: 20px;
-}
-.quote span {
-  padding-bottom: 3px;
-  transform: translateY(30px);
-}
-@keyframes upQuote {
-  from {
-  }
-  to {
-    transform: translateY(-30px);
-  }
-}
-.quote:hover {
-  animation: upQuote 0.3s ease-in-out forwards;
+  color: #2e363e;
+  font-family: "open sans", sans-serif;
 }
