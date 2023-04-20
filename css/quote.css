@@ -16,3 +16,11 @@
   border: none;
   background-color: transparent;
 }
+.left-button {
+  position: fixed;
+  left: 33%;
+}
+.right-button {
+  position: fixed;
+  right: 33%;
+}

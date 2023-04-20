@@ -43,8 +43,48 @@ const quotes = [
 
 const quote = document.querySelector(".quote span:first-child");
 const release = document.querySelector(".quote span:last-child");
+const leftBtn = document.querySelector(".left-button button");
+const rightBtn = document.querySelector(".right-button button");
 
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+let todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
 release.innerText = todaysQuote.release;
+const indexNum = quotes.findIndex((a) => a.quote == todaysQuote.quote);
+
+console.log(indexNum);
+
+const adjQuoteNumber = {
+  minusQuote: function () {
+    todaysQuote = quotes[indexNum - 1];
+  },
+  plusQuote: function () {
+    todaysQuote = quotes[indexNum + 1];
+  },
+};
+
+const slideText = {
+  lBtn: function () {
+    if (indexNum < 10) {
+      quote.innerText = quotes[indexNum - 1].quote;
+      release.innerText = quotes[indexNum - 1].release;
+      adjQuoteNumber.minusQuote();
+    } else if (indexNum === 0) {
+      quote.innerText = quotes[9].quote;
+      release.innerText = quotes[9].release;
+    }
+  },
+  rBtn: function () {
+    if (indexNum < 10) {
+      quote.innerText = quotes[indexNum + 1].quote;
+      release.innerText = quotes[indexNum + 1].release;
+      adjQuoteNumber.plusQuote();
+    } else if (indexNum === 9) {
+      quote.innerText = quotes[1].quote;
+      release.innerText = quotes[1].release;
+    }
+  },
+};
+
+leftBtn.addEventListener("click", slideText.lBtn);
+rightBtn.addEventListener("click", slideText.rBtn);
