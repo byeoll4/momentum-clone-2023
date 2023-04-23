@@ -5,7 +5,20 @@
   justify-content: center;
 }
 #todo-list li {
-  display: block;
+  display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
+}
+#todo-list input {
+  width: 20px;
+  height: 20px;
+}
+#todo-list button {
+  width: 20px;
+  height: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  border: none;
+  background-color: tomato;
 }

@@ -8,6 +8,7 @@
 @import "clock.css";
 @import "greeting.css";
 @import "quote.css";
+@import "background.css";
 
 .hidden {
   display: none;
