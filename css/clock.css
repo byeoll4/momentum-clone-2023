@@ -4,6 +4,8 @@
   font-size: 70px;
   font-style: italic;
   font-weight: 600;
-
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 4px 3px black;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 3px;
 }

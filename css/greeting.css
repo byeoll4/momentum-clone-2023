@@ -3,7 +3,8 @@
 .greeting {
   padding: 10px;
   border: none;
-  border-bottom: 2px solid rgba(0, 0, 0);
+  border-bottom: 2px solid rgba(254, 219, 102, 0.5);
+  background: transparent;
   width: 300px;
   text-align: center;
   font-size: 30px;
@@ -12,4 +13,9 @@
 .greeting {
   border: none;
   padding-bottom: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  color: rgb(205, 205, 205);
+  text-shadow: 4px 4px 3px black;
+  letter-spacing: 2px;
 }

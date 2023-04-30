@@ -9,6 +9,7 @@
 @import "greeting.css";
 @import "quote.css";
 @import "background.css";
+@import "weather.css";
 
 .hidden {
   display: none;

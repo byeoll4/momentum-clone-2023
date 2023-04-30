@@ -28,7 +28,7 @@ function paintToDo(newTodo) {
   checkBox.classList.add("todo-checkbox");
   const deleteBox = document.createElement("button");
   deleteBox.classList.add("todo-deletebox");
-  deleteBox.innerText = "➖";
+  deleteBox.innerText = "✖️";
   deleteBox.addEventListener("click", deleteToDo);
   li.appendChild(checkBox);
   li.appendChild(span);

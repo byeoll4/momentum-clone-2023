@@ -61,16 +61,16 @@ const rightBtn = document.querySelector(".right-button button");
 const bgImage = document.createElement("img");
 
 let setBgIndex = 0;
-let gamesIndex = 0;
-//let indexNum = quotes.findIndex((a) => a.quote == todaysQuote.quote);
+let gamesIndex = Math.floor(Math.random() * games.length);
 
 loadTitle(games[gamesIndex]);
-bgImage.src = `img/${images[setBgIndex]}`;
+
+bgImage.src = `img/${images[gamesIndex]}`;
+document.body.appendChild(bgImage);
 
 function loadTitle(title) {
   game.innerText = title.game;
   release.innerText = title.release;
-  document.body.appendChild(bgImage);
 }
 
 function lfBtn() {
